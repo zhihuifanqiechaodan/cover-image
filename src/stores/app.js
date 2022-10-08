@@ -59,6 +59,7 @@ export const useAppStore = defineStore("app", {
         fontFamily: "inherit",
         fontWeight: 500,
       },
+      theme: "DefaultTheme",
     };
   },
   actions: {

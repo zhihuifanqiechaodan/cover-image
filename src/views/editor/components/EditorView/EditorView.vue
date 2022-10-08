@@ -1,12 +1,14 @@
 <template>
   <div class="editor-view">
-    <ViewTitle />
-    <ViewAuthor />
+    <component :is="theme" />
   </div>
 </template>
 
 <script setup>
-import { ViewTitle, ViewAuthor } from "./index";
-</script>
+import { useAppStore } from "@/stores/app.js";
+import { computed } from "vue";
+import themeEnum from "./index";
 
-<style lang="scss"></style>
+const appStore = useAppStore();
+const theme = computed(() => themeEnum[appStore.theme]);
+</script>

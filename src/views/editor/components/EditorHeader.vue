@@ -4,4 +4,8 @@
 
 <script setup></script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.editor-header {
+  height: 50px;
+}
+</style>
