@@ -1,19 +1,9 @@
 <template>
   <div class="editor-title">
-    <div class="title">标题设置</div>
+    <div class="title">作者设置</div>
     <div class="edit-item">
       <div class="edit-label">标题</div>
-      <el-input
-        v-model="title"
-        :rows="2"
-        type="textarea"
-        placeholder="Please input"
-        :autosize="{
-          minRows: 2,
-          maxRows: 6,
-        }"
-        class="edit-value"
-      />
+      <el-input v-model="title" placeholder="Please input" class="edit-value" />
     </div>
     <div class="edit-item">
       <div class="edit-label">字体</div>
@@ -67,38 +57,38 @@ import { computed } from "vue";
 
 const appStore = useAppStore();
 const title = computed({
-  get: () => appStore.titleInfo.title,
+  get: () => appStore.authorInfo.title,
   set: (value) => {
-    appStore.changeTitleInfo({ key: "title", value });
+    appStore.changeAuthorInfo({ key: "title", value });
   },
 });
 const fontSize = computed({
-  get: () => appStore.titleInfo.fontSize,
+  get: () => appStore.authorInfo.fontSize,
   set: (value) => {
-    appStore.changeTitleInfo({ key: "fontSize", value });
+    appStore.changeAuthorInfo({ key: "fontSize", value });
   },
 });
 const color = computed({
-  get: () => appStore.titleInfo.color,
+  get: () => appStore.authorInfo.color,
   set: (value) => {
-    appStore.changeTitleInfo({ key: "color", value });
+    appStore.changeAuthorInfo({ key: "color", value });
   },
 });
 const fontFamily = computed({
-  get: () => appStore.titleInfo.fontFamily,
+  get: () => appStore.authorInfo.fontFamily,
   set: (value) => {
-    appStore.changeTitleInfo({ key: "fontFamily", value });
+    appStore.changeAuthorInfo({ key: "fontFamily", value });
   },
 });
 const fontWeight = computed({
-  get: () => appStore.titleInfo.fontWeight,
+  get: () => appStore.authorInfo.fontWeight,
   set: (value) => {
-    appStore.changeTitleInfo({ key: "fontWeight", value });
+    appStore.changeAuthorInfo({ key: "fontWeight", value });
   },
 });
 
 const handleColorActiveChange = (value) => {
-  appStore.changeTitleInfo({ key: "color", value });
+  appStore.changeAuthorInfo({ key: "color", value });
 };
 </script>
 

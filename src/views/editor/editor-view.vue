@@ -1,10 +1,10 @@
 <template>
   <div class="app-container">
     <EditorHeader />
-    <div class="main-wrapper">
-      <EditorSidebar />
-      <EditorView />
-    </div>
+    <el-row class="main-wrapper">
+      <el-col :span="6"> <EditorSidebar /> </el-col>
+      <el-col :span="18"><EditorView /></el-col>
+    </el-row>
   </div>
 </template>
 
