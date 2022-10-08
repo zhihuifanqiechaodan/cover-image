@@ -2,7 +2,11 @@
   <div class="app-container">
     <EditorHeader />
     <el-row class="main-wrapper">
-      <el-col :span="6"> <EditorSidebar /> </el-col>
+      <el-col :span="6">
+        <el-scrollbar height="calc(100vh - 50px)">
+          <EditorSidebar />
+        </el-scrollbar>
+      </el-col>
       <el-col :span="18" class="main">
         <EditorView />
         <el-button>下载</el-button>

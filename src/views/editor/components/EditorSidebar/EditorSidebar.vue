@@ -1,5 +1,7 @@
 <template>
   <div class="editor-sidebar">
+    <SidebarBackgroundColor />
+    <el-divider />
     <SidebarTitle />
     <el-divider />
     <SiderbarAuthor />
@@ -8,7 +10,7 @@
 </template>
 
 <script setup>
-import { SidebarTitle, SiderbarAuthor } from "./index";
+import { SidebarTitle, SiderbarAuthor, SidebarBackgroundColor } from "./index";
 </script>
 
 <style lang="scss">

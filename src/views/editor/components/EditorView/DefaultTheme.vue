@@ -1,6 +1,5 @@
 <template>
-  <div class="default-theme">
-    默认主题
+  <div class="default-theme" :style="appStore.themeStyleObject">
     <ViewTitle />
     <ViewAuthor />
   </div>
@@ -8,6 +7,13 @@
 
 <script setup>
 import { ViewTitle, ViewAuthor } from "./index";
+import { useAppStore } from "@/stores/app.js";
+
+const appStore = useAppStore();
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.default-theme {
+  padding: 20px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="editor-title">
+  <div class="title-wrapper">
     <div class="title">标题设置</div>
     <div class="edit-item">
       <div class="edit-label">标题</div>
@@ -103,7 +103,7 @@ const handleColorActiveChange = (value) => {
 </script>
 
 <style lang="scss">
-.editor-title {
+.title-wrapper {
   .title {
     font-size: 18px;
     font-weight: 500;

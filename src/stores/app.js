@@ -60,7 +60,19 @@ export const useAppStore = defineStore("app", {
         fontWeight: 500,
       },
       theme: "DefaultTheme",
+      backgroundColor: "#ffffff",
+      layoutWidth: 800,
+      layoutHeight: 640,
     };
+  },
+  getters: {
+    themeStyleObject() {
+      return {
+        width: this.layoutWidth + "px",
+        height: this.layoutHeight + "px",
+        backgroundColor: this.backgroundColor,
+      };
+    },
   },
   actions: {
     // 变更标题详情
@@ -70,6 +82,12 @@ export const useAppStore = defineStore("app", {
     // 变更作者详情
     changeAuthorInfo({ key, value }) {
       this.authorInfo[key] = value;
+    },
+    // 数据变更
+    changeSetting({ key, value }) {
+      if (Object.prototype.hasOwnProperty.call(this, key)) {
+        this[key] = value;
+      }
     },
   },
 });
