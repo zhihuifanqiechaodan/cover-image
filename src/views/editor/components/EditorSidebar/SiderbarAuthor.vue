@@ -105,6 +105,7 @@ const handleColorActiveChange = (value) => {
 
     .edit-value {
       flex: 1;
+      display: flex;
       margin-left: 20px;
     }
   }

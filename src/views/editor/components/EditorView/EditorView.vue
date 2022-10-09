@@ -1,11 +1,13 @@
 <template>
-  <el-button @click="handleDownload">下载</el-button>
   <div
     ref="refEditorView"
     :style="appStore.themeStyleObject"
     class="editor-view"
   >
     <component :is="theme" class="theme-wrapper" />
+  </div>
+  <div class="download">
+    <el-button @click="handleDownload" type="primary">下载</el-button>
   </div>
 </template>
 
@@ -32,6 +34,9 @@ const handleDownload = () => {
 </script>
 
 <style lang="scss" scoped>
+.download {
+  margin-top: 40px;
+}
 .theme-wrapper {
   width: 100%;
   height: 100%;

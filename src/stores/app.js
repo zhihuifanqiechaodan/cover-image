@@ -62,8 +62,8 @@ export const useAppStore = defineStore("app", {
       theme: "DefaultTheme",
       backgroundColor: "#ffffff",
       layoutWidth: 800,
-      layoutWidthRatio: 5,
-      layoutHeightRatio: 4,
+      layoutWidthRatio: 2,
+      layoutHeightRatio: 1,
       imageInfo: {
         fit: "none",
         src: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
