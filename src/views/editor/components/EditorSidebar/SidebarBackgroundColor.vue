@@ -46,14 +46,20 @@ const handleColorActiveChange = (value) => {
 const layoutWidthRatio = computed({
   get: () => appStore.layoutWidthRatio,
   set: (value) => {
-    appStore.changeSetting({ key: "layoutWidthRatio", value });
+    appStore.changeSetting({
+      key: "layoutWidthRatio",
+      value: value ? value : 1,
+    });
   },
 });
 
 const layoutHeightRatio = computed({
   get: () => appStore.layoutHeightRatio,
   set: (value) => {
-    appStore.changeSetting({ key: "layoutHeightRatio", value });
+    appStore.changeSetting({
+      key: "layoutHeightRatio",
+      value: value ? value : 1,
+    });
   },
 });
 </script>
