@@ -47,7 +47,7 @@ export const useAppStore = defineStore("app", {
       ],
       titleInfo: {
         title: "How I built my first project with vue",
-        fontSize: "40",
+        fontSize: "36",
         color: "#031c24",
         fontFamily: "inherit",
         fontWeight: 500,
