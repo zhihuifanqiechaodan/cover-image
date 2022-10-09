@@ -7,9 +7,12 @@
           <EditorSidebar />
         </el-scrollbar>
       </el-col>
-      <el-col :span="18" class="main">
-        <EditorView />
-        <el-button>下载</el-button>
+      <el-col :span="18">
+        <el-scrollbar height="calc(100vh - 50px)">
+          <div class="main">
+            <EditorView />
+          </div>
+        </el-scrollbar>
       </el-col>
     </el-row>
   </div>

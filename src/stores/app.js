@@ -62,14 +62,22 @@ export const useAppStore = defineStore("app", {
       theme: "DefaultTheme",
       backgroundColor: "#ffffff",
       layoutWidth: 800,
-      layoutHeight: 640,
+      layoutWidthRatio: 5,
+      layoutHeightRatio: 4,
+      imageInfo: {
+        fit: "none",
+        src: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+        networkImageUrl: "",
+      },
     };
   },
   getters: {
     themeStyleObject() {
       return {
         width: this.layoutWidth + "px",
-        height: this.layoutHeight + "px",
+        height:
+          (this.layoutWidth / this.layoutWidthRatio) * this.layoutHeightRatio +
+          "px",
         backgroundColor: this.backgroundColor,
       };
     },
@@ -88,6 +96,10 @@ export const useAppStore = defineStore("app", {
       if (Object.prototype.hasOwnProperty.call(this, key)) {
         this[key] = value;
       }
+    },
+    // 变更插图详情
+    changeImageInfo({ key, value }) {
+      this.imageInfo[key] = value;
     },
   },
 });

@@ -1,19 +1,35 @@
 <template>
-  <div class="default-theme" :style="appStore.themeStyleObject">
-    <ViewTitle />
-    <ViewAuthor />
+  <div class="default-theme">
+    <div class="left">
+      <ViewTitle class="view-title" />
+      <ViewAuthor />
+    </div>
+    <div class="right">
+      <ViewImage />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ViewTitle, ViewAuthor } from "./index";
-import { useAppStore } from "@/stores/app.js";
-
-const appStore = useAppStore();
+import { ViewTitle, ViewAuthor, ViewImage } from "./index";
 </script>
 
 <style lang="scss">
 .default-theme {
+  display: flex;
+  align-items: center;
   padding: 20px;
+
+  .left,
+  .right {
+    flex: 0 0 50%;
+  }
+
+  .left {
+    padding: 40px;
+    .view-title {
+      margin-top: 40px;
+    }
+  }
 }
 </style>

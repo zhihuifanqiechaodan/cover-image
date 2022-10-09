@@ -6,11 +6,18 @@
     <el-divider />
     <SiderbarAuthor />
     <el-divider />
+    <SidebarImage />
+    <el-divider />
   </div>
 </template>
 
 <script setup>
-import { SidebarTitle, SiderbarAuthor, SidebarBackgroundColor } from "./index";
+import {
+  SidebarTitle,
+  SiderbarAuthor,
+  SidebarBackgroundColor,
+  SidebarImage,
+} from "./index";
 </script>
 
 <style lang="scss">

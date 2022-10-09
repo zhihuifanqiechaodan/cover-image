@@ -11,24 +11,19 @@
       </div>
     </div>
     <div class="edit-item">
-      <div class="edit-label">宽度</div>
-      <el-input
-        v-model="layoutWidth"
-        placeholder="Please input"
-        class="edit-value"
-      >
-        <template #append>px</template>
-      </el-input>
-    </div>
-    <div class="edit-item">
-      <div class="edit-label">高度</div>
-      <el-input
-        v-model="layoutHeight"
-        placeholder="Please input"
-        class="edit-value"
-      >
-        <template #append>px</template>
-      </el-input>
+      <div class="edit-label">宽/高</div>
+      <div class="edit-value">
+        <el-input-number
+          v-model="layoutWidthRatio"
+          :min="1"
+          controls-position="right"
+        />
+        <el-input-number
+          v-model="layoutHeightRatio"
+          :min="1"
+          controls-position="right"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -45,20 +40,20 @@ const backgroundColor = computed({
   },
 });
 const handleColorActiveChange = (value) => {
-  appStore.changeBackgroundColor({ value });
+  appStore.changeSetting({ key: "backgroundColor", value });
 };
 
-const layoutWidth = computed({
-  get: () => appStore.layoutWidth,
+const layoutWidthRatio = computed({
+  get: () => appStore.layoutWidthRatio,
   set: (value) => {
-    appStore.changeSetting({ key: "layoutWidth", value });
+    appStore.changeSetting({ key: "layoutWidthRatio", value });
   },
 });
 
-const layoutHeight = computed({
-  get: () => appStore.layoutHeight,
+const layoutHeightRatio = computed({
+  get: () => appStore.layoutHeightRatio,
   set: (value) => {
-    appStore.changeSetting({ key: "layoutHeight", value });
+    appStore.changeSetting({ key: "layoutHeightRatio", value });
   },
 });
 </script>
