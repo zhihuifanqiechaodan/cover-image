@@ -1,7 +1,9 @@
 <template>
   <div class="editor-header">
     <div class="left">
-      <div class="title">coverImage</div>
+      <RouterLink to="/">
+        <div class="title">coverImage</div>
+      </RouterLink>
     </div>
     <div class="right">
       <div class="right-item">如何使用</div>

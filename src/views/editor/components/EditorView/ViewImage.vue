@@ -21,4 +21,8 @@ const imageSrc = computed(() => {
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.view-image {
+  font-size: 0;
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
   <div class="default-theme">
     <div class="left">
-      <ViewTitle class="view-title" />
-      <ViewAuthor />
+      <ViewTitle />
+      <ViewAuthor class="view-author" />
     </div>
     <div class="right">
       <ViewImage />
@@ -26,8 +26,8 @@ import { ViewTitle, ViewAuthor, ViewImage } from "./index";
   }
 
   .left {
-    padding: 40px;
-    .view-title {
+    padding: 0 40px;
+    .view-author {
       margin-top: 40px;
     }
   }

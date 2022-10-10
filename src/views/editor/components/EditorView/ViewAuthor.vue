@@ -1,5 +1,5 @@
 <template>
-  <div class="view-title" :style="titleStyleObject">
+  <div :style="titleStyleObject">
     {{ appStore.authorInfo.title }}
   </div>
 </template>
@@ -18,5 +18,3 @@ const titleStyleObject = computed(() => {
   };
 });
 </script>
-
-<style lang="scss"></style>

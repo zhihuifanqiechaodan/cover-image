@@ -1,14 +1,14 @@
 <template>
   <div class="app-container">
-    <EditorHeader />
+    <Header />
     <el-row class="main-wrapper">
       <el-col :span="6">
-        <el-scrollbar height="calc(100vh - 50px)">
+        <el-scrollbar height="calc(100vh - 76px)">
           <EditorSidebar />
         </el-scrollbar>
       </el-col>
       <el-col :span="18">
-        <el-scrollbar height="calc(100vh - 50px)">
+        <el-scrollbar height="calc(100vh - 76px)">
           <div class="main">
             <EditorView />
           </div>
@@ -19,13 +19,14 @@
 </template>
 
 <script setup>
-import { EditorHeader, EditorSidebar, EditorView } from "./components/index";
+import { EditorSidebar, EditorView } from "./components/index";
 </script>
 
 <style lang="scss">
 .app-container {
   .main-wrapper {
-    height: calc(100vh - 50px);
+    padding-top: 76px;
+    height: calc(100vh - 76px);
     .main {
       padding: 40px;
       background-color: #edf0f0;
