@@ -11,13 +11,19 @@
       </div>
     </div>
     <div class="edit-item">
-      <div class="edit-label">宽/高</div>
+      <div class="edit-label">宽比</div>
       <div class="edit-value">
         <el-input-number
           v-model="layoutWidthRatio"
           :min="1"
           controls-position="right"
         />
+      </div>
+    </div>
+    <el-divider> {{ layoutWidthRatio }} / {{ layoutHeightRatio }} </el-divider>
+    <div class="edit-item">
+      <div class="edit-label">高比</div>
+      <div class="edit-value">
         <el-input-number
           v-model="layoutHeightRatio"
           :min="1"
@@ -79,6 +85,10 @@ const layoutHeightRatio = computed({
       flex: 1;
       display: flex;
       margin-left: 20px;
+
+      .el-input-number {
+        flex: 1;
+      }
     }
   }
 }

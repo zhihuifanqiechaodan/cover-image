@@ -1,10 +1,6 @@
 <template>
   <div class="view-image">
-    <el-image
-      style="width: 100%; height: 100%"
-      :src="imageSrc"
-      :fit="appStore.imageInfo.fit"
-    />
+    <el-image :src="imageSrc" :fit="appStore.imageInfo.fit" />
   </div>
 </template>
 

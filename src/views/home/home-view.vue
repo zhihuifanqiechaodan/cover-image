@@ -1,17 +1,6 @@
 <template>
   <div class="app-container">
     <div class="home-wrapper">
-      <div class="header">
-        <div class="left">
-          <svgIcon name="edit" />
-          <div class="title">coverImage</div>
-        </div>
-        <div class="right">
-          <RouterLink to="/editor">
-            <el-button type="primary">前往编辑</el-button>
-          </RouterLink>
-        </div>
-      </div>
       <h1 class="title">快速为你的博客创建封面图片</h1>
       <div class="content">
         <div class="content-item">
@@ -54,40 +43,19 @@
   display: flex;
   justify-content: center;
   background-color: #f9fafb;
+  min-height: calc(100vh - 76px);
   .home-wrapper {
     width: 80vw;
     text-align: center;
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-      border-bottom: 1px solid #dcdfe6;
-      box-sizing: border-box;
-
-      .left {
-        display: flex;
-        align-items: center;
-        font-size: 24px;
-        font-weight: 500;
-
-        .title {
-          margin-left: 10px;
-        }
-      }
-      .right {
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    .title {
-      font-size: 36px;
+    > .title {
+      padding-top: 100px;
+      font-size: 48px;
     }
 
     .content {
+      margin-top: 100px;
       .content-item {
-        margin-top: 100px;
         .title {
           font-size: 32px;
           font-weight: 500;
