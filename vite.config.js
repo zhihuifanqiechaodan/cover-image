@@ -11,6 +11,7 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/cover-image/",
   plugins: [
     vue(),
     AutoImport({
