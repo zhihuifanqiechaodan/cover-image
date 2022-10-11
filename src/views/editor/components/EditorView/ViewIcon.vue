@@ -1,6 +1,10 @@
 <template>
   <div class="view-icon">
-    <SvgIcon :name="appStore.icon" :size="props.size" />
+    <span
+      class="iconfont"
+      :class="[appStore.icon]"
+      :style="{ fontSize: props.size }"
+    ></span>
   </div>
 </template>
 

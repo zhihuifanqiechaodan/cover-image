@@ -79,8 +79,15 @@ export const useAppStore = defineStore("app", {
           value: "ModernTheme",
         },
       ],
-      iconList: ["vue", "angular", "react", "node", "linux", "javascript"],
-      icon: "vue",
+      iconList: [
+        "icon-linux",
+        "icon-vuejs",
+        "icon-angular",
+        "icon-javascript",
+        "icon-nodejs",
+        "icon-react",
+      ],
+      icon: "icon-vuejs",
     };
   },
   getters: {

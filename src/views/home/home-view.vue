@@ -1,7 +1,13 @@
 <template>
   <div class="app-container">
     <div class="home-wrapper">
-      <h1 class="title">快速为你的博客创建封面图片</h1>
+      <div class="banner">
+        <h1 class="title">Cover Image</h1>
+        <p>基于 Vue 3，快速为你的博客创建封面图片</p>
+      </div>
+      <div class="jumbotron">
+        <span class="iconfont icon-linux"></span>
+      </div>
       <div class="content">
         <div class="content-item">
           <div class="title">封面图比你想象的更重要!</div>
@@ -43,14 +49,21 @@
   display: flex;
   justify-content: center;
   background-color: #f9fafb;
-  min-height: calc(100vh - 76px);
+  padding-top: 55px;
   .home-wrapper {
-    width: 80vw;
-    text-align: center;
+    padding: 40px;
 
-    > .title {
-      padding-top: 100px;
-      font-size: 48px;
+    .banner {
+      text-align: center;
+      .title {
+        font-size: 34px;
+        line-height: 48px;
+      }
+
+      > p {
+        color: #606266;
+        font-size: 18px;
+      }
     }
 
     .content {

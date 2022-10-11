@@ -2,7 +2,7 @@
   <div class="author-wrapper">
     <div class="title">
       <span>图标设置</span>
-      <SvgIcon :name="icon" size="24px" />
+      <span class="iconfont" :class="[icon]"></span>
     </div>
     <div class="edit-item">
       <div class="edit-label">图标</div>
@@ -15,7 +15,7 @@
         >
           <div class="custom-icon-wrapper">
             <span>{{ item }}</span>
-            <SvgIcon :name="item" size="24px" />
+            <span class="iconfont" :class="[item]"></span>
           </div>
         </el-option>
       </el-select>
@@ -45,7 +45,7 @@ const icon = computed({
     font-size: 18px;
     font-weight: 500;
 
-    .svg-icon {
+    .iconfont {
       margin-left: 5px;
     }
   }
@@ -66,5 +66,9 @@ const icon = computed({
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .iconfont {
+    font-size: 24px;
+  }
 }
 </style>
