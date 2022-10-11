@@ -8,6 +8,8 @@
     <el-divider />
     <SiderbarAuthor />
     <el-divider />
+    <SidebarIcon />
+    <el-divider />
     <SidebarImage />
     <el-divider />
   </div>
@@ -20,6 +22,7 @@ import {
   SidebarBackgroundColor,
   SidebarImage,
   SidebarTheme,
+  SidebarIcon,
 } from "./index";
 </script>
 

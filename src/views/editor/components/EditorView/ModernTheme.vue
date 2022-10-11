@@ -1,6 +1,10 @@
 <template>
   <div class="modern-theme">
-    <div class="left"></div>
+    <div class="left">
+      <div class="view-icon-wrapper">
+        <ViewIcon size="72px" />
+      </div>
+    </div>
     <div class="right-wrapper">
       <div class="right">
         <ViewTitle />
@@ -11,7 +15,7 @@
 </template>
 
 <script setup>
-import { ViewTitle, ViewAuthor } from "./index";
+import { ViewTitle, ViewAuthor, ViewIcon } from "./index";
 </script>
 
 <style lang="scss">
@@ -22,6 +26,17 @@ import { ViewTitle, ViewAuthor } from "./index";
 
   .left {
     flex: 0 0 35%;
+
+    .view-icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: #ffffff;
+    }
   }
 
   .right {
