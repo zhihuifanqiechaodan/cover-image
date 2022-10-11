@@ -25,7 +25,7 @@
         class="edit-value"
       >
         <template #trigger>
-          <el-button type="primary">select file</el-button>
+          <el-button type="primary">选择图片</el-button>
         </template>
         <template #file="{ file }">
           <img class="el-upload-list__item-thumbnail" :src="file.url" alt="" />

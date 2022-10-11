@@ -1,5 +1,7 @@
 <template>
   <div class="editor-sidebar">
+    <SidebarTheme />
+    <el-divider />
     <SidebarBackgroundColor />
     <el-divider />
     <SidebarTitle />
@@ -17,6 +19,7 @@ import {
   SiderbarAuthor,
   SidebarBackgroundColor,
   SidebarImage,
+  SidebarTheme,
 } from "./index";
 </script>
 

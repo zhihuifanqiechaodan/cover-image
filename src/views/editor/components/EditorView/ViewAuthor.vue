@@ -1,5 +1,5 @@
 <template>
-  <div :style="titleStyleObject">
+  <div :style="titleStyleObject" class="view-author">
     {{ appStore.authorInfo.title }}
   </div>
 </template>
