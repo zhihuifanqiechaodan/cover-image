@@ -2,7 +2,10 @@
   <div class="default-theme">
     <div class="left">
       <ViewTitle />
-      <ViewAuthor class="view-author" />
+      <div class="icon-author-wrapper">
+        <ViewIcon :size="appStore.authorInfo.fontSize + 'px'" />
+        <ViewAuthor />
+      </div>
     </div>
     <div class="right">
       <ViewImage />
@@ -11,7 +14,10 @@
 </template>
 
 <script setup>
-import { ViewTitle, ViewAuthor, ViewImage } from "./index";
+import { ViewTitle, ViewAuthor, ViewImage, ViewIcon } from "./index";
+import { useAppStore } from "@/stores/app.js";
+
+const appStore = useAppStore();
 </script>
 
 <style lang="scss">
@@ -27,7 +33,8 @@ import { ViewTitle, ViewAuthor, ViewImage } from "./index";
 
   .left {
     padding: 0 40px;
-    .view-author {
+    .icon-author-wrapper {
+      display: flex;
       margin-top: 40px;
     }
   }

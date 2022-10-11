@@ -21,9 +21,10 @@ body,
   -webkit-tap-highlight-color: transparent;
   background-color: var(--color-bg-1);
   font-size: 14px;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   color: #031c24;
+  line-height: 1;
 }
 
 a {

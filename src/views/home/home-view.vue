@@ -6,15 +6,24 @@
         <p>基于 Vue 3，快速为你的博客创建封面图片</p>
       </div>
       <div class="jumbotron">
-        <span class="iconfont icon-linux"></span>
+        <div class="introduce-image-wrapper">
+          <el-image
+            src="https://oss.fabrique.cn/f5ec3ba1-b646-4b5c-ba0f-66ce748d8f7b.jpg"
+          />
+        </div>
+        <div class="introduce-image-wrapper">
+          <el-image
+            src="https://oss.fabrique.cn/8d2f84b3-6bda-4ec0-8811-52ed230b1a10.jpg"
+          />
+        </div>
       </div>
       <div class="content">
         <div class="content-item">
-          <div class="title">封面图比你想象的更重要!</div>
+          <h2 class="title">封面图比你想象的更重要!</h2>
           <div class="introduce-wrapper">
             <div class="introduce-item">
               <div class="wenzhang-wrapper">
-                <svgIcon name="wenzhang" size="64px" color="#ffffff" />
+                <svgIcon name="wenzhang" size="24px" color="#ffffff" />
               </div>
               <div class="introduce">
                 每天发布大约700万篇博客文章。随着新时代博客工具的兴起，它会上升的更多。
@@ -22,7 +31,7 @@
             </div>
             <div class="introduce-item">
               <div class="tisheng-wrapper">
-                <svgIcon name="tisheng" size="64px" color="#ffffff" />
+                <svgIcon name="tisheng" size="24px" color="#ffffff" />
               </div>
               <div class="introduce">
                 与随机库存图片相比，好的封面图片可以带来更高的转化率。
@@ -66,18 +75,39 @@
       }
     }
 
+    .jumbotron {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 80vw;
+      margin: 0 auto;
+      margin-top: 55px;
+
+      .introduce-image-wrapper {
+        padding: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04),
+          0px 8px 20px rgba(0, 0, 0, 0.08);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
     .content {
-      margin-top: 100px;
+      margin-top: 55px;
+      text-align: center;
       .content-item {
         .title {
-          font-size: 32px;
-          font-weight: 500;
+          font-size: 34px;
         }
 
         .introduce-wrapper {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
+          min-height: 220px;
 
           .introduce-item {
             display: flex;
@@ -89,8 +119,8 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              width: 96px;
-              height: 96px;
+              width: 48px;
+              height: 48px;
               border-radius: 50%;
             }
             .wenzhang-wrapper {
@@ -104,7 +134,6 @@
             .introduce {
               flex: 1;
               margin-left: 20px;
-              font-size: 24px;
               font-weight: 500;
             }
           }
@@ -113,13 +142,14 @@
     }
 
     .footer {
+      margin: 55px 0;
+      text-align: center;
       h2 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       p {
         padding: 20px 0;
-        font-size: 24px;
         font-weight: 500;
       }
     }
