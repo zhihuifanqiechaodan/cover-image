@@ -1,13 +1,13 @@
 <template>
+  <div class="download">
+    <el-button @click="handleDownload" type="primary">下载</el-button>
+  </div>
   <div
     ref="refEditorView"
     :style="appStore.themeStyleObject"
     class="editor-view"
   >
     <component :is="theme" class="theme-wrapper" />
-  </div>
-  <div class="download">
-    <el-button @click="handleDownload" type="primary">下载</el-button>
   </div>
 </template>
 

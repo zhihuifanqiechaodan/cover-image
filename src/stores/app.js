@@ -67,6 +67,7 @@ export const useAppStore = defineStore("app", {
         fit: "none",
         src: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
         networkImageUrl: "",
+        watermarkingUrl: "",
       },
       theme: "ModernTheme",
       themeList: [
@@ -77,6 +78,10 @@ export const useAppStore = defineStore("app", {
         {
           label: "现代",
           value: "ModernTheme",
+        },
+        {
+          label: "水印",
+          value: "Watermarking",
         },
       ],
       iconList: [

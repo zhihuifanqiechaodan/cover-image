@@ -33,6 +33,26 @@
       </el-upload>
     </div>
     <div class="edit-item">
+      <div class="edit-label">水印图片</div>
+      <el-upload
+        ref="refUpload"
+        action="#"
+        :on-change="handleWatermarkingChange"
+        :on-exceed="handleWatermarkingExceed"
+        :limit="1"
+        :auto-upload="false"
+        list-type="picture"
+        class="edit-value"
+      >
+        <template #trigger>
+          <el-button type="primary">选择图片</el-button>
+        </template>
+        <template #file="{ file }">
+          <img class="el-upload-list__item-thumbnail" :src="file.url" alt="" />
+        </template>
+      </el-upload>
+    </div>
+    <div class="edit-item">
       <div class="edit-label">网络图片</div>
       <el-input
         v-model="networkImageUrl"
@@ -71,8 +91,17 @@ const networkImageUrl = computed({
 const handleChange = (uploadFile) => {
   appStore.changeImageInfo({ key: "src", value: uploadFile.url });
 };
+const handleWatermarkingChange = (uploadFile) => {
+  appStore.changeImageInfo({ key: "watermarkingUrl", value: uploadFile.url });
+};
 
 const handleExceed = (files) => {
+  refUpload.value.clearFiles();
+  const file = files[0];
+  file.uid = genFileId();
+  refUpload.value.handleStart(file);
+};
+const handleWatermarkingExceed = (files) => {
   refUpload.value.clearFiles();
   const file = files[0];
   file.uid = genFileId();
