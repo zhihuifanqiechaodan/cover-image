@@ -15,7 +15,7 @@
 import { useAppStore } from "@/stores/app.js";
 import { computed, reactive, toRefs } from "vue";
 import themeEnum from "./index";
-import useDomToImage from "@/hooks/useDomToImage.js";
+import useDomToImage from "@/hooks/useDomTouseImage.js";
 
 const domToImage = useDomToImage();
 

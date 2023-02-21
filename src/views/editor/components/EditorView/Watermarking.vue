@@ -28,6 +28,12 @@ const watermarkingUrl = computed(() => appStore.imageInfo.watermarkingUrl);
 .view-image {
   position: relative;
   font-size: 0;
+  background-color: #fff;
+
+  .el-image {
+    width: 100%;
+    background-color: #fff;
+  }
 
   .background {
     z-index: 1;
@@ -40,11 +46,11 @@ const watermarkingUrl = computed(() => appStore.imageInfo.watermarkingUrl);
   }
 
   .watermarking {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // width: 100%;
+    // height: 100%;
     text-align: center;
   }
 }
